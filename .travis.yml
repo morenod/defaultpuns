@@ -1,8 +1,10 @@
-language: bash
+language: python
+python:
+    - 2.7
 
 notifications:
     email: false
 
 script:
-    # Check if all files are formatted according to the standard
-    - find . -type f -maxdepth 1 -not -name .git -exec python tests/format.py {} \;
+    - find . -name *.py -exec pep8 --ignore=E501 {} +
+    - python tests/format.py
