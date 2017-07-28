@@ -5,6 +5,11 @@ python:
 notifications:
     email: false
 
+before_install:
+    - pip install pep8
+    - pip install misspellings
+    - pip install python-coveralls
+
 script:
     - find . -name *.py -exec pep8 --ignore=E501 {} +
     - python tests/format.py
