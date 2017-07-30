@@ -15,9 +15,9 @@ def isValidRegex(regexp=""):
 
 exitcode = 0
 
-for file in os.listdir('./'):
+for file in os.listdir('./punsfiles/'):
     if not os.path.isdir(file) and not file.startswith('.'):
-        with open(os.path.expanduser(file), 'r') as staticpuns:
+        with open(os.path.expanduser('./punsfiles/' + file), 'r') as staticpuns:
             number = 0
             for line in staticpuns:
                 number += 1
