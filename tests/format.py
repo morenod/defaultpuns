@@ -13,6 +13,7 @@ def isValidRegex(regexp=""):
         is_valid = False
     return is_valid
 
+
 exitcode = 0
 
 for file in os.listdir('./punsfiles/'):
